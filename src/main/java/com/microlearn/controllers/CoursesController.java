@@ -51,7 +51,7 @@ public class CoursesController {
 
 	@GetMapping(value = "/course", produces = MediaType.APPLICATION_XML_VALUE)
 	public Course getCourse() {
-		return new Course("Java", 100, "Morning");
+		return new Course("Java", 100, MORNING_SCHEDULE);
 	}
 
 	@DeleteMapping(value = "/{title}")
