@@ -28,19 +28,17 @@ public class CoursesController {
 		courses.add(new Course("Linux", 80, "Weekends"));
 	}
 
-	@GetMapping(value = "courses", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "courses", produces = MediaType.APPLICATION_XML_VALUE)
 	public List<Course> getCourses() {
 		return courses;
 	}
 
 	@GetMapping(value = "courses/{title}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Course> searchCourses(@PathVariable String title) {
-		return courses.stream()
-                .filter(c -> c.getTitle().contains(title))
-                .toList();
+		return courses.stream().filter(c -> c.getTitle().contains(title)).toList();
 	}
 
-	@GetMapping(value = "course", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "course", produces = MediaType.APPLICATION_XML_VALUE)
 	public Course getCourse() {
 		return new Course("Java", 100, "Morning");
 	}

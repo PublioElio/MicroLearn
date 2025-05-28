@@ -1,5 +1,8 @@
 package com.microlearn.model;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+@JacksonXmlRootElement
 public class Course {
 	private String title;
 	private int length;
