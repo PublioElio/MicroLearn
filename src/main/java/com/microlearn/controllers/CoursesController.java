@@ -66,20 +66,20 @@ public class CoursesController {
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String, String>> addCourse(@RequestBody Course course) {
 	    courses.add(course);
-	    Map<String, String> response = Map.of("message", "Course added successfully!");
-	    return ResponseEntity.status(HttpStatus.CREATED).body(response);
+	    return ResponseEntity.status(HttpStatus.CREATED).body(Map.of("message", "Course added successfully!"));
 	}
 	
 	@PutMapping(value = "/{title}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<String> updateCourse(@PathVariable String title, @RequestBody Course updatedCourse) {
+	public ResponseEntity<Course> updateCourse(@PathVariable String title, @RequestBody Course updatedCourse) {
 	    for (Course course : courses) {
 	        if (course.getTitle().equalsIgnoreCase(title)) {
 	            course.setLength(updatedCourse.getLength());
 	            course.setSchedule(updatedCourse.getSchedule());
-	            return ResponseEntity.ok("{\"message\": \"Course updated successfully!\"}");
+	            return ResponseEntity.ok(course);
 	        }
 	    }
-	    return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"message\": \"Course '" + title + "' not found.\"}");
+	    return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
+
 
 }
