@@ -25,6 +25,8 @@ import jakarta.annotation.PostConstruct;
 public class CoursesController {
 
 	private static final String PM_SCHEDULE = "Afternoon";
+	private static final String MORNING_SCHEDULE = "Morning";
+	private static final String WEEKEND_SCHEDULE = "Weekends";
 	private List<Course> courses;
 
 	@PostConstruct
@@ -32,9 +34,9 @@ public class CoursesController {
 		courses = new ArrayList<>();
 		courses.add(new Course("Spring Boot", 150, PM_SCHEDULE));
 		courses.add(new Course("Python", 300, PM_SCHEDULE));
-		courses.add(new Course("Java EE", 250, "Morning"));
+		courses.add(new Course("Java EE", 250, MORNING_SCHEDULE));
 		courses.add(new Course("JavaScript", 150, PM_SCHEDULE));
-		courses.add(new Course("Linux", 80, "Weekends"));
+		courses.add(new Course("Linux", 80, WEEKEND_SCHEDULE));
 	}
 
 	@GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
