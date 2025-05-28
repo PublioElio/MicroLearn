@@ -67,21 +67,20 @@ public class CoursesController {
 
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String, String>> addCourse(@RequestBody Course course) {
-	    courses.add(course);
-	    return ResponseEntity.status(HttpStatus.CREATED).body(Map.of("message", "Course added successfully!"));
-	}
-	
-	@PutMapping(value = "/{title}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Course> updateCourse(@PathVariable String title, @RequestBody Course updatedCourse) {
-	    for (Course course : courses) {
-	        if (course.getTitle().equalsIgnoreCase(title)) {
-	            course.setLength(updatedCourse.getLength());
-	            course.setSchedule(updatedCourse.getSchedule());
-	            return ResponseEntity.ok(course);
-	        }
-	    }
-	    return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		courses.add(course);
+		return ResponseEntity.status(HttpStatus.CREATED).body(Map.of("message", "Course added successfully!"));
 	}
 
+	@PutMapping(value = "/{title}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Course> updateCourse(@PathVariable String title, @RequestBody Course updatedCourse) {
+		for (Course course : courses) {
+			if (course.getTitle().equalsIgnoreCase(title)) {
+				course.setLength(updatedCourse.getLength());
+				course.setSchedule(updatedCourse.getSchedule());
+				return ResponseEntity.ok(course);
+			}
+		}
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+	}
 
 }
