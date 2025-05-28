@@ -13,6 +13,8 @@ public class Course {
 		this.length = length;
 		this.schedule = schedule;
 	}
+	
+	public Course() {}
 
 	public String getTitle() {
 		return title;
