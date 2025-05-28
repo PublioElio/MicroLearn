@@ -5,8 +5,10 @@ public class Course {
 	private int length;
 	private String schedule;
 
-	public Course() {
-
+	public Course(String title, int length, String schedule) {
+		this.title = title;
+		this.length = length;
+		this.schedule = schedule;
 	}
 
 	public String getTitle() {
