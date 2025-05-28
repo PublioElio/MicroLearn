@@ -10,5 +10,5 @@ public class MicroLearnApplication {
 		SpringApplication.run(MicroLearnApplication.class, args);
 	}
 
-	sout
+	
 }
