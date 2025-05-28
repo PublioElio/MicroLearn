@@ -63,7 +63,7 @@ public class CoursesController {
 		} else {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Course '" + title + "' not found.");
 		}
-	}
+	} 
 
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String, String>> addCourse(@RequestBody Course course) {
