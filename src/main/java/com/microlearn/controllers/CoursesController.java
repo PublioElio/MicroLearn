@@ -37,8 +37,8 @@ public class CoursesController {
 	@GetMapping(value = "courses/{title}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Course> searchCourses(@PathVariable String title) {
 		return courses.stream()
-                .filter(c -> c.getTitle().contains(title))
-                .collect(Collectors.toList());
+                .filter(c -> c.getTitle().equalsIgnoreCase(title))
+                .toList();
 	}
 
 	@GetMapping(value = "course", produces = MediaType.APPLICATION_JSON_VALUE)
