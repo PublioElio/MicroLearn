@@ -2,6 +2,7 @@ package com.microlearn.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,13 +36,9 @@ public class CoursesController {
 
 	@GetMapping(value = "courses/{title}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Course> searchCourses(@PathVariable String title) {
-		List<Course> foundCourses = new ArrayList<>();
-		for(Course c:courses) {
-			if(c.getTitle().contains(title)) {
-				foundCourses.add(c);
-			}
-		}
-		return foundCourses;
+		return courses.stream()
+                .filter(c -> c.getTitle().contains(title))
+                .collect(Collectors.toList());
 	}
 
 	@GetMapping(value = "course", produces = MediaType.APPLICATION_JSON_VALUE)
