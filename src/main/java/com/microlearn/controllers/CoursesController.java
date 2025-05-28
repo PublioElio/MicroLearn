@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -68,6 +69,17 @@ public class CoursesController {
 	    Map<String, String> response = Map.of("message", "Course added successfully!");
 	    return ResponseEntity.status(HttpStatus.CREATED).body(response);
 	}
-
+	
+	@PutMapping(value = "/{title}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<String> updateCourse(@PathVariable String title, @RequestBody Course updatedCourse) {
+	    for (Course course : courses) {
+	        if (course.getTitle().equalsIgnoreCase(title)) {
+	            course.setLength(updatedCourse.getLength());
+	            course.setSchedule(updatedCourse.getSchedule());
+	            return ResponseEntity.ok("{\"message\": \"Course updated successfully!\"}");
+	        }
+	    }
+	    return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"message\": \"Course '" + title + "' not found.\"}");
+	}
 
 }
