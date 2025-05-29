@@ -3,6 +3,7 @@ package com.microlearn;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -27,24 +28,29 @@ class MicroLearnApplicationTests {
 	@Test
 	@Order(0)
 	void deleteCourse() throws Exception {
-		mock.perform(delete("/courses/Python"))
-			.andDo(print())
-			.andExpect(status().isOk());
+		mock.perform(delete("/courses/Python")).andDo(print()).andExpect(status().isOk());
 	}
 
 	@Test
 	@Order(1)
 	void testCourses() throws Exception {
-		mock.perform(get("/courses"))
-			.andDo(print())
-			.andExpect(status().isOk());
+		mock.perform(get("/courses")).andDo(print()).andExpect(status().isOk());
 	}
 
 	@Test
 	@Order(2)
-	void testAlta() throws Esception {
-		mock.perform(post("/courses"))
-			.contentType(MediaType.APPLICATION_JSON)
-			.content();
+	void createCourse() throws Exception {
+		mock.perform(post("/courses").contentType(MediaType.APPLICATION_JSON)
+				.content("{\"nombre\":\"Angular 10\", \"duracion\":40, \"horario\":\"afternoon\"}")).andDo(print())
+				.andExpect(status().isCreated());
 	}
+
+	@Test
+	@Order(3)
+	void updateCourse() throws Exception {
+		mock.perform(put("/curso").contentType(MediaType.APPLICATION_JSON)
+				.content("{\"nombre\":\"Angular 10\", \"duracion\":60, \"horario\":\"afternoon\"}")).andDo(print())
+				.andExpect(status().isOk());
+	}
+
 }
