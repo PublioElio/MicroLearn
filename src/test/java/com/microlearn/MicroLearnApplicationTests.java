@@ -41,15 +41,15 @@ class MicroLearnApplicationTests {
 	@Order(2)
 	void createCourse() throws Exception {
 		mock.perform(post("/courses").contentType(MediaType.APPLICATION_JSON)
-				.content("{\"nombre\":\"Angular 10\", \"duracion\":40, \"horario\":\"afternoon\"}")).andDo(print())
+				.content("{\"title\":\"Angular 10\", \"length\":40, \"schedule\":\"afternoon\"}")).andDo(print())
 				.andExpect(status().isCreated());
 	}
 
 	@Test
 	@Order(3)
 	void updateCourse() throws Exception {
-		mock.perform(put("/curso").contentType(MediaType.APPLICATION_JSON)
-				.content("{\"nombre\":\"Angular 10\", \"duracion\":60, \"horario\":\"afternoon\"}")).andDo(print())
+		mock.perform(put("/courses/Angular 10").contentType(MediaType.APPLICATION_JSON)
+				.content("{\"title\":\"Angular 10\", \"length\":60, \"schedule\":\"afternoon\"}")).andDo(print())
 				.andExpect(status().isOk());
 	}
 

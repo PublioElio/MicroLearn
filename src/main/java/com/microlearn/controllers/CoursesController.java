@@ -75,6 +75,7 @@ public class CoursesController {
 	public ResponseEntity<Course> updateCourse(@PathVariable String title, @RequestBody Course updatedCourse) {
 		for (Course course : courses) {
 			if (course.getTitle().equalsIgnoreCase(title)) {
+				course.setTitle(updatedCourse.getTitle());
 				course.setLength(updatedCourse.getLength());
 				course.setSchedule(updatedCourse.getSchedule());
 				return ResponseEntity.ok(course);
