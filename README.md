@@ -27,38 +27,37 @@ microlearn/
 
 ## 🚀 **Instalación y configuración**  
 
-### **1️⃣ Prerrequisitos**  
+### 1️⃣ Prerrequisitos
 Antes de ejecutar la aplicación, asegúrate de tener instalado:  
 - **Java 17 o superior**  
 - **Maven** (si utilizas Maven)  
 - **Gradle** (si usas Gradle como alternativa)  
 
-### **2️⃣ Clonar el repositorio**  
-```sh
+### 2️⃣ Clonar el repositorio 
+```
 git clone https://github.com/tuusuario/microlearn.git
 cd microlearn
 ```
-
-### **3️⃣ Configuración de propiedades**  
+### 3️⃣ Configuración de propiedades**  
 El archivo **`application.properties`** define las configuraciones clave:  
-```properties
+```
 spring.application.name=MicroLearn
 server.port=4200
 ```
 Esto establece el nombre de la aplicación y el puerto en el que se ejecutará (**4200** en lugar del **8080** por defecto).  
 
-### **4️⃣ Compilar el proyecto**  
+### 4️⃣ Compilar el proyecto  
 Si usas **Maven**:  
-```sh
+```
 mvn clean package
 ```  
 Si usas **Gradle**:  
-```sh
+```
 ./gradlew build
 ```
 
-### **5️⃣ Ejecutar la aplicación**  
-```sh
+### 5️⃣ Ejecutar la aplicación  
+```
 mvn spring-boot:run
 ```
 o  
