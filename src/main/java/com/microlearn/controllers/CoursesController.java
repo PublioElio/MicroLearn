@@ -93,6 +93,14 @@ public class CoursesController {
 		}
 	} 
 
+	/**
+	 * Adds a new course to the list.
+	 *
+	 * @param course The course object received in the request body.
+	 * @return A {@code ResponseEntity} containing a confirmation message
+	 *         and a CREATED status upon successful addition.
+	 * @author Adriano Díaz Benítez.
+	 */
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String, String>> addCourse(@RequestBody Course course) {
 		courses.add(course);
