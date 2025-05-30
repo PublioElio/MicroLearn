@@ -66,6 +66,7 @@ public class CoursesController {
 	 * Retrieves a predefined course in XML format.
 	 *
 	 * @return A {@code Course} object containing course details.
+	 * @author Adriano Díaz Benítez.
 	 */
 	@GetMapping(value = "/course", produces = MediaType.APPLICATION_XML_VALUE)
 	public Course getCourse() {
