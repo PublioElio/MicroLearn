@@ -33,10 +33,18 @@ import jakarta.annotation.PostConstruct;
 public class CoursesController {
 
 	private static final String PM_SCHEDULE = "Afternoon";
+	
 	private static final String MORNING_SCHEDULE = "Morning";
+	
 	private static final String WEEKEND_SCHEDULE = "Weekends";
+	
+	/** List of available courses. */
 	private List<Course> courses;
 
+	/**
+     * Initializes the list of courses with predefined data.
+     * This method is executed after the controller is constructed.
+     */
 	@PostConstruct
 	public void init() {
 		courses = new ArrayList<>();
