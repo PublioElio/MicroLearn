@@ -1,16 +1,16 @@
-# **MicroLearn - Course Management API**  
+# MicroLearn - Course Management API  
 
-## 📌 **Descripción**
+## 📌 Descripción
 MicroLearn es una **API REST** desarrollada con **Spring Boot** y **Spring Data JPA**, que permite gestionar cursos. Ofrece funcionalidades para **listar, buscar, añadir, actualizar y eliminar cursos** mediante endpoints bien definidos.  
 
-## 🔧 **Tecnologías utilizadas**
+## 🔧 Tecnologías utilizadas
 - **Java 17**
 - **Spring Boot**
 - **Spring Data JPA**  
 - **Jackson para serialización XML/JSON**  
 - **JUnit 5 y MockMvc para pruebas**  
 
-## 📂 **Estructura del proyecto**  
+## 📂 Estructura del proyecto  
 ```
 microlearn/
 │── src/
@@ -25,7 +25,7 @@ microlearn/
 │── pom.xml  # Dependencias de Maven
 ```
 
-## 🚀 **Instalación y configuración**  
+## 🚀 Instalación y configuración 
 
 ### 1️⃣ Prerrequisitos
 Antes de ejecutar la aplicación, asegúrate de tener instalado:  
@@ -61,12 +61,12 @@ Si usas **Gradle**:
 mvn spring-boot:run
 ```
 o  
-```sh
+```
 java -jar target/microlearn-0.0.1-SNAPSHOT.jar
 ```
 
-## 🌍 **Endpoints disponibles**  
-### **CoursesController - Gestión de cursos**  
+## 🌍 Endpoints disponibles  
+### CoursesController - Gestión de cursos  
 | Método | Endpoint | Descripción | Tipo de respuesta |
 |--------|---------|------------|-------------------|
 | `GET` | `/courses` | Obtiene todos los cursos disponibles | XML |
@@ -76,10 +76,10 @@ java -jar target/microlearn-0.0.1-SNAPSHOT.jar
 | `PUT` | `/courses/{title}` | Actualiza un curso por título | JSON |
 | `DELETE` | `/courses/{title}` | Elimina un curso por título | JSON |
 
-## 🏗 **Modelo de datos**  
-### **Course**  
+## 🏗 Modelo de datos 
+### Course 
 La entidad `Course` representa un curso en el sistema.  
-```java
+```
 @JacksonXmlRootElement
 public class Course {
     private String title;
@@ -88,8 +88,8 @@ public class Course {
 }
 ```
 
-#### **Ejemplo JSON**  
-```json
+#### Ejemplo JSON  
+```
 {
   "title": "Spring Boot",
   "length": 150,
@@ -97,7 +97,7 @@ public class Course {
 }
 ```
 
-#### **Ejemplo XML**  
+#### Ejemplo XML  
 ```xml
 <Course>
   <title>Spring Boot</title>
@@ -106,11 +106,11 @@ public class Course {
 </Course>
 ```
 
-## 🧪 **Pruebas**  
-### **MicroLearnApplicationTests**  
+## 🧪 Pruebas  
+### MicroLearnApplicationTests 
 La aplicación cuenta con una suite de pruebas unitarias e integración para validar el correcto funcionamiento de los endpoints.  
 
-### **Ejecutar pruebas:**  
+### Ejecutar pruebas:  
 ```sh
 mvn test
 ```
@@ -119,7 +119,7 @@ o
 ./gradlew test
 ```
 
-### **Casos de prueba en `MicroLearnApplicationTests`**  
+### Casos de prueba en `MicroLearnApplicationTests`  
 | Test | Método | Endpoint | Esperado |
 |------|--------|----------|-----------|
 | `deleteCourse()` | `DELETE` | `/courses/Python` | 200 OK (Curso eliminado) |
@@ -127,7 +127,7 @@ o
 | `createCourse()` | `POST` | `/courses` | 201 Created (Curso agregado) |
 | `updateCourse()` | `PUT` | `/courses/Angular 10` | 200 OK (Curso actualizado) |
 
-## 🎯 **Conclusión**  
+## 🎯 Conclusión  
 MicroLearn proporciona una API REST ligera y estructurada para la gestión de cursos. Con soporte para **JSON y XML**, validaciones y pruebas automatizadas, es una excelente base para proyectos educativos o plataformas de aprendizaje.  
 
 📌 **¿Qué sigue?**  
@@ -135,5 +135,3 @@ Si deseas mejorar esta aplicación, puedes:
 - Integrar **Spring Data JPA con una base de datos real** (PostgreSQL, MySQL, etc.).  
 - Implementar **Swagger** para la documentación de API.  
 - Crear un cliente frontend con **Angular, React o Vue**.  
-
-¡Espero que este README te ayude a documentar y organizar tu proyecto! 🚀 ¿Quieres que refine algún detalle o agregue más información? 🤓
