@@ -42,8 +42,8 @@ public class CoursesController {
 	/**
 	 * Retrieves the list of available courses in XML format.
 	 *
-	 * @return Lista de cursos disponibles.
-	 * @author Adriano Díaz
+	 * @return A list of available courses.
+	 * @author Adriano Díaz Benítez
 	 */
 	@GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
 	public List<Course> getCourses() {
