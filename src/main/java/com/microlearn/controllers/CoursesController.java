@@ -36,6 +36,7 @@ public class CoursesController {
 	
 	private static final String MORNING_SCHEDULE = "Morning";
 	
+	/** Constant for weekend schedule. */
 	private static final String WEEKEND_SCHEDULE = "Weekends";
 	
 	/** List of available courses. */
