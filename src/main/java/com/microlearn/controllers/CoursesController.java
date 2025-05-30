@@ -37,8 +37,7 @@ public class CoursesController {
 		courses.add(new Course("Java EE", 250, MORNING_SCHEDULE));
 		courses.add(new Course("JavaScript", 150, PM_SCHEDULE));
 		courses.add(new Course("Linux", 80, WEEKEND_SCHEDULE));
-		courses.add(new Course("Java for Android", 300, MORNING_SCHEDULE));
-		
+		courses.add(new Course("Java for Android", 300, MORNING_SCHEDULE));	
 	}
 
 	/**
