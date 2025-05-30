@@ -74,6 +74,14 @@ public class CoursesController {
 		return new Course("Java", 100, MORNING_SCHEDULE);
 	}
 
+	/**
+	 * Deletes a course based on its title.
+	 *
+	 * @param title The title of the course to be deleted.
+	 * @return A {@code ResponseEntity} containing a success message if the course was deleted,
+	 *         or a NOT FOUND status if the course was not found.
+	 * @author Adriano Díaz Benítez.
+	 */
 	@DeleteMapping(value = "/{title}")
 	public ResponseEntity<String> deleteCourse(@PathVariable String title) {
 		boolean removed = courses.removeIf(c -> c.getTitle().equalsIgnoreCase(title));
