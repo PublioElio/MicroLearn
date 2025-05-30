@@ -20,6 +20,14 @@ import com.microlearn.model.Course;
 
 import jakarta.annotation.PostConstruct;
 
+/**
+ * Controller for managing courses in the system.
+ * 
+ * This REST controller provides endpoints for retrieving, adding, updating, 
+ * and deleting courses. It uses an in-memory list to simulate course data.
+ * 
+ * @author Adriano Díaz Benítez
+ */
 @RestController
 @RequestMapping("/courses")
 public class CoursesController {
@@ -107,6 +115,15 @@ public class CoursesController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(Map.of("message", "Course added successfully!"));
 	}
 
+	/**
+	 * Updates an existing course based on its title.
+	 *
+	 * @param title The title of the course to be updated.
+	 * @param updatedCourse The new course details received in the request body.
+	 * @return A {@code ResponseEntity} containing the updated course if found,
+	 *         or a NOT FOUND status if the course does not exist.
+	 * @author Adriano Díaz Benítez.
+	 */
 	@PutMapping(value = "/{title}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Course> updateCourse(@PathVariable String title, @RequestBody Course updatedCourse) {
 		for (Course course : courses) {
