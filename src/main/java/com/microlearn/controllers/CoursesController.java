@@ -39,6 +39,12 @@ public class CoursesController {
 		courses.add(new Course("Linux", 80, WEEKEND_SCHEDULE));
 	}
 
+	/**
+	 * Obtiene la lista de cursos disponibles en formato XML.
+	 *
+	 * @return Lista de cursos disponibles.
+	 * @author Adriano Díaz
+	 */
 	@GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
 	public List<Course> getCourses() {
 		return courses;
@@ -80,7 +86,7 @@ public class CoursesController {
 				course.setSchedule(updatedCourse.getSchedule());
 				return ResponseEntity.ok(course);
 			}
-		}
+		} 
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
