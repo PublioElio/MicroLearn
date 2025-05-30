@@ -50,6 +50,12 @@ public class CoursesController {
 		return courses;
 	}
 
+	/**
+	 * Searches for courses whose title contains the specified keyword.
+	 *
+	 * @param title The keyword used to filter courses by title.
+	 * @return A list of courses matching the given title keyword.
+	 */
 	@GetMapping(value = "/{title}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Course> searchCourses(@PathVariable String title) {
 		return courses.stream().filter(c -> c.getTitle().contains(title)).toList();
