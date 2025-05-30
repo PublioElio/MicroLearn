@@ -43,7 +43,7 @@ public class CoursesController {
 	 * Retrieves the list of available courses in XML format.
 	 *
 	 * @return A list of available courses.
-	 * @author Adriano Díaz Benítez
+	 * @author Adriano Díaz Benítez.
 	 */
 	@GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
 	public List<Course> getCourses() {
@@ -55,12 +55,18 @@ public class CoursesController {
 	 *
 	 * @param title The keyword used to filter courses by title.
 	 * @return A list of courses matching the given title keyword.
+	 * @author Adriano Díaz Benítez.
 	 */
 	@GetMapping(value = "/{title}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Course> searchCourses(@PathVariable String title) {
 		return courses.stream().filter(c -> c.getTitle().contains(title)).toList();
 	}
 
+	/**
+	 * Retrieves a predefined course in XML format.
+	 *
+	 * @return A {@code Course} object containing course details.
+	 */
 	@GetMapping(value = "/course", produces = MediaType.APPLICATION_XML_VALUE)
 	public Course getCourse() {
 		return new Course("Java", 100, MORNING_SCHEDULE);
