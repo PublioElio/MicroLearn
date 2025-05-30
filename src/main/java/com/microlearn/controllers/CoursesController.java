@@ -40,7 +40,7 @@ public class CoursesController {
 	}
 
 	/**
-	 * Obtiene la lista de cursos disponibles en formato XML.
+	 * Retrieves the list of available courses in XML format.
 	 *
 	 * @return Lista de cursos disponibles.
 	 * @author Adriano Díaz
