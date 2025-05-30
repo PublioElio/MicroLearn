@@ -38,8 +38,8 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado:
 git clone https://github.com/tuusuario/microlearn.git
 cd microlearn
 ```
-### 3️⃣ Configuración de propiedades**  
-El archivo **`application.properties`** define las configuraciones clave:  
+### 3️⃣ Configuración de propiedades 
+El archivo `application.properties` define las configuraciones clave:  
 ```
 spring.application.name=MicroLearn
 server.port=4200
