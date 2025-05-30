@@ -4,7 +4,7 @@
 
 # MicroLearn - Course Management API  
 
-## 📌 Descripción
+## 📚 Descripción
 MicroLearn es una **API REST** desarrollada con **Spring Boot** y **Spring Data JPA**, que permite gestionar cursos. Ofrece funcionalidades para **listar, buscar, añadir, actualizar y eliminar cursos** mediante endpoints bien definidos.  
 
 ## 🔧 Tecnologías utilizadas
@@ -29,7 +29,7 @@ microlearn/
 │── pom.xml  # Dependencias de Maven
 ```
 
-## 🚀 Instalación y configuración 
+## 🎓 Instalación y configuración 
 
 ### 1️⃣ Prerrequisitos
 Antes de ejecutar la aplicación, asegúrate de tener instalado:  
@@ -80,7 +80,7 @@ java -jar target/microlearn-0.0.1-SNAPSHOT.jar
 | `PUT` | `/courses/{title}` | Actualiza un curso por título | JSON |
 | `DELETE` | `/courses/{title}` | Elimina un curso por título | JSON |
 
-## 🏗 Modelo de datos 
+## 👩‍🎓 Modelo de datos 
 ### Course 
 La entidad `Course` representa un curso en el sistema.  
 ```
@@ -131,10 +131,10 @@ o
 | `createCourse()` | `POST` | `/courses` | 201 Created (Curso agregado) |
 | `updateCourse()` | `PUT` | `/courses/Angular 10` | 200 OK (Curso actualizado) |
 
-## 🎯 Conclusión  
+## 🧠 Conclusión  
 MicroLearn proporciona una API REST ligera y estructurada para la gestión de cursos. Con soporte para **JSON y XML**, validaciones y pruebas automatizadas, es una excelente base para proyectos educativos o plataformas de aprendizaje.  
 
-📌 **¿Qué sigue?**  
+📌 **¿Cómo mejorar este proyecto?**  
 Si deseas mejorar esta aplicación, puedes:  
 - Integrar **Spring Data JPA con una base de datos real** (PostgreSQL, MySQL, etc.).  
 - Implementar **Swagger** para la documentación de API.  
