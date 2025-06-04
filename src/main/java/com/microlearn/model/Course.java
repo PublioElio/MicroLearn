@@ -6,6 +6,8 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
  * Represents a course in the MicroLearn system. This class holds information
  * about the course title, length, and schedule. It is annotated with
  * {@code @JacksonXmlRootElement} to support XML serialization.
+ * 
+ * @author Adriano Díaz Benítez
  */
 @JacksonXmlRootElement
 public class Course {
