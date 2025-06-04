@@ -130,12 +130,3 @@ o
 | `testCourses()` | `GET` | `/courses` | 200 OK (Lista de cursos) |
 | `createCourse()` | `POST` | `/courses` | 201 Created (Curso agregado) |
 | `updateCourse()` | `PUT` | `/courses/Angular 10` | 200 OK (Curso actualizado) |
-
-## 🧠 Conclusión  
-MicroLearn proporciona una API REST ligera y estructurada para la gestión de cursos. Con soporte para **JSON y XML**, validaciones y pruebas automatizadas, es una excelente base para proyectos educativos o plataformas de aprendizaje.  
-
-📌 **¿Cómo mejorar este proyecto?**  
-Si deseas mejorar esta aplicación, puedes:  
-- Integrar **Spring Data JPA con una base de datos real** (PostgreSQL, MySQL, etc.).  
-- Implementar **Swagger** para la documentación de API.  
-- Crear un cliente frontend con **Angular, React o Vue**.  
