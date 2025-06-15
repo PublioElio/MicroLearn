@@ -2,7 +2,16 @@
   <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYW5uYzR2dmQ2YmVjdHViZjlnaGg5YmR3N2V4Z2p6cDVmcHVwdzQybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ZN4J5o5nvjzaxF2X64/giphy.gif" alt="MicroLearn Banner" width="200">
 </p>
 
-# MicroLearn - Course Management API  
+# MicroLearn - Course Management API
+
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.0-brightgreen)
+![JPA](https://img.shields.io/badge/Spring%20Data%20JPA-Enabled-orange)
+![REST](https://img.shields.io/badge/API-RESTful-red)
+![Build](https://img.shields.io/badge/Build-Maven-yellow)
+![Serialization](https://img.shields.io/badge/Serialization-JSON%20%2F%20XML-lightgrey)
+![Tests](https://img.shields.io/badge/Tested-JUnit%205%20%2F%20MockMvc-success)
+![License](https://img.shields.io/badge/License-MIT-informational)
 
 ## 📚 Descripción
 MicroLearn es una **API REST** desarrollada con **Spring Boot** y **Spring Data JPA**, que permite gestionar cursos. Ofrece funcionalidades para **listar, buscar, añadir, actualizar y eliminar cursos** mediante endpoints bien definidos.  
