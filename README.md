@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYW5uYzR2dmQ2YmVjdHViZjlnaGg5YmR3N2V4Z2p6cDVmcHVwdzQybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ZN4J5o5nvjzaxF2X64/giphy.gif" alt="MicroLearn Banner" width="200">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDN2bGNsaWw1dGZmc2FxcmYxeWlxNTZ4Z3E4ZnhybXVlanJ1d2VuNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/0Ia3NWdlk6sTqQN16G/giphy.gif" alt="HiveContact banner" width="200">
 </p>
 
 # MicroLearn - Course Management API  
